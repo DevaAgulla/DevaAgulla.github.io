@@ -8,17 +8,3 @@
  
  }
 ?>
-<!-- <html>
-<img src="C:\xampp\htdocs\mytxt\backgroundpic.jpg" width="300px" height="300px">
-  <form method="post" action="<?php echo $_SERVER['PHP_SELF'];
-  ?>" >
-    <div > 
-      <div>
-        <input type="text" name="username" placeholder="username">
-      </div>
-      <div>
-        <button type="submit">Send Message</button>
-      <div>
-    </div>
-  </form>
-</html> -->
