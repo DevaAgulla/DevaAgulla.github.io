@@ -463,7 +463,7 @@
                    </div>
                    <div class=" col-md-6  right-info" data-aos="fade-up">
                      <div class="text">Message Me </div>
-                     <form class="message-box" id="" action="mainfiles/action.php" method="post">
+                     <form class="message-box" id="" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
                         <div class="fields">
                           <div class="field name">
                             <input name="username" type="text" placeholder="Name" required>
@@ -546,5 +546,16 @@
     <script>
       AOS.init({once:true});
     </script>
+    
+    <?php
+ if($_SERVER["REQUEST_METHOD"]=="POST"){
+   $username = $_POST["username"];
+   $myfile = fopen("msg.txt","a");
+   fwrite($myfile,$username);
+   fclose($myfile);
+ 
+ 
+ }
+?>
   </body>
 </html>
